@@ -1,0 +1,106 @@
+.hydraulic-panel { display: flex; flex-direction: column; }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  padding: 22px;
+  overflow: hidden;
+}
+
+.card-eyebrow {
+  font-size: 11px;
+  color: var(--dim);
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.card-heading {
+  font-size: 18px;
+  font-weight: 700;
+  color: #f0f9ff;
+  margin-bottom: 18px;
+}
+
+/* ── Gauge ── */
+.water-gauge {
+  height: 200px;
+  border-radius: 14px;
+  background: rgba(2, 8, 20, 0.5);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.water-fill {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(180deg, rgba(125,211,252,0.7), rgba(14,165,233,0.45));
+  background-size: 100% 40px;
+  transition: height 1s ease;
+  animation: waterShimmer 4s linear infinite;
+}
+
+.water-surface {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background: rgba(186, 230, 253, 0.4);
+  border-radius: 999px;
+}
+
+.gauge-label {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 800;
+  font-size: 22px;
+  color: #fff;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  white-space: nowrap;
+}
+
+/* ── Data rows ── */
+.data-rows { display: grid; gap: 10px; }
+
+.data-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 11px 14px;
+  border-radius: 12px;
+  background: rgba(2, 8, 20, 0.45);
+  border: 1px solid var(--border);
+}
+
+.row-label {
+  font-size: 12px;
+  color: var(--dim);
+  margin-bottom: 3px;
+}
+
+.row-val {
+  font-size: 15px;
+  font-weight: 700;
+  color: #f0f9ff;
+}
+
+.row-val small { color: var(--dim); font-size: 11px; margin-left: 2px; }
+
+.status-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.dot-ok   { background: #22c55e; box-shadow: 0 0 8px #22c55e; }
+.dot-warn { background: #f59e0b; box-shadow: 0 0 8px #f59e0b; }
+.dot-err  { background: #ef4444; box-shadow: 0 0 8px #ef4444; }

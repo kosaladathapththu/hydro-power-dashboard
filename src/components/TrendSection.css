@@ -1,0 +1,25 @@
+.trend-section { flex: 1; }
+
+.trend-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.chart-box {
+  padding: 14px;
+  border-radius: 16px;
+  background: rgba(2, 8, 20, 0.45);
+  border: 1px solid var(--border);
+}
+
+.chart-box h3 {
+  font-size: 13px;
+  font-weight: 600;
+  color: #e2f4ff;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 860px) {
+  .trend-grid { grid-template-columns: 1fr; }
+}
